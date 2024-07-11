@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+
+        form {
+            width: 600px;
+            background: #f9f9f9;
+            padding: 20px;
+            border: 1px solid #ddd;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 20px;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="url"],
+        input[type="date"],
+        input[type="datetime-local"],
+        input[type="month"],
+        input[type="week"],
+        input[type="number"],
+        input[type="tel"],
+        input[type="search"],
+        input[type="time"],
+        input[type="color"],
+        input[type="submit"],
+        select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        input[type="color"] {
+            padding: 0;
+            width: 50px;
+            height: 50px;
+        }
+
+        .date-time-container {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .date-time-container input[type="date"],
+        .date-time-container input[type="time"] {
+            width: calc(50% - 5px);
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre">
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email">
+
+        <label for="url">URL:</label>
+        <input type="url" id="url" name="url">
+
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" name="fecha">
+
+        <label for="tiempo">Hora:</label>
+        <input type="time" id="tiempo" name="tiempo">
+
+        <label for="fechaHora">Fecha y hora:</label>
+        <div class="date-time-container">
+            <input type="date" id="fechaHoraFecha" name="fechaHoraFecha">
+            <input type="time" id="fechaHoraHora" name="fechaHoraHora">
+        </div>
+
+        <label for="mes">Mes:</label>
+        <select id="mes" name="mes">
+            <option value="1">Enero</option>
+            <option value="2">Febrero</option>
+            <option value="3">Marzo</option>
+            <option value="4">Abril</option>
+            <option value="5">Mayo</option>
+            <option value="6">Junio</option>
+            <option value="7">Julio</option>
+            <option value="8">Agosto</option>
+            <option value="9">Septiembre</option>
+            <option value="10">Octubre</option>
+            <option value="11">Noviembre</option>
+            <option value="12">Diciembre</option>
+        </select>
+
+        <label for="semana">Semana:</label>
+        <select id="semana" name="semana">
+            <option value="1">Semana 1</option>
+            <option value="2">Semana 2</option>
+            <option value="3">Semana 3</option>
+            <option value="4">Semana 4</option>
+        </select>
+
+        <label for="numero">Número (min -10, max 10):</label>
+        <input type="number" id="numero" name="numero" min="-10" max="10">
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono">
+
+        <label for="termino">Término de búsqueda:</label>
+        <input type="search" id="termino" name="termino">
+
+        <label for="color">Color favorito:</label>
+        <input type="color" id="color" name="color" style="width: 50px; height: 50px;">
+
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
